@@ -168,9 +168,6 @@ mlag_comm_layer_wrapper_init(
     comm_layer_data->reconnect_timer_started = 0;
     comm_layer_data->protect_socket = protect_socket;
     if (comm_layer_data->protect_socket == SOCKET_PROTECTION) {
-
-
-Imaginary Buffer Line
         if (pthread_mutex_init(&(comm_layer_data->socket_mutex), NULL) < 0) {
             err = -EIO;
             MLAG_BAIL_ERROR_MSG(err, "Failed to init mutex\n");
